@@ -21,6 +21,10 @@ var gulp = require('gulp'),
     plumber = require('gulp-plumber'),
     rigger = require('gulp-rigger'),
 	spritesmith = require('gulp.spritesmith'),
+    svgSprite = require('gulp-svg-sprites'),
+    svgmin = require('gulp-svgmin'),
+    cheerio = require('gulp-cheerio'),
+    replace = require('gulp-replace'),
     size = require('gulp-size'),
     opn = require('opn');
 
@@ -29,14 +33,14 @@ var src = {
         js: ['./src/js/**/*.js'],
         sass: ['./src/sass/main.{scss,sass}'],
         images: ['./src/img/**/*.*', '!./src/img/icons/*.png'],
-        sprites: ['./src/img/icons/*.png'],
+        sprite: ['./src/img/icons/*.svg'],
         fonts: ['./src/fonts/**/*.*'],
         html: ['./src/*.html']
     },
 
     server = {
         host: 'localhost',
-        port: '9000'
+        port: '9001'
     },
 
     env,
@@ -239,26 +243,6 @@ gulp.task('images', function() {
 });
 
 
-//SVG-sprite
-
-/*gulp.task('sprite', function() {
-    return gulp.src(src.sprites)
-        .pipe(svgSprites(config = {
-            selector: "icon-%f",
-            cssFile: "_sprite.scss",
-            svg: {
-                sprite: "img/sprite.svg"
-            },
-            dimension       : {
-                maxWidth    : 16,
-                maxHeight   : 16
-            },
-            baseSize: 16
-        }))
-        .pipe(gulp.dest('./src/sass'))
-        .pipe(connect.reload())
-});*/
-
 // ~ Sprite ~
 
 /*gulp.task('sprite', function () {
@@ -271,21 +255,21 @@ gulp.task('images', function() {
 
 // Удаление старых файлов
 gulp.task('sprite-clean', function (cb) {
-	del(['./src/img/sprite.png', './src/sass/_sprite.scss'], cb);
+	del(['./src/img/sprite.png', './src/sass/_svg_sprite.scss'], cb);
 });
 
 
-gulp.task('sprite', function () {
+/*gulp.task('sprite', function () {
 	var spriteData = gulp.src(src.sprites).pipe(spritesmith({
 		imgName: '../img/sprite.png',
-		cssName: '_sprite.scss',
+		cssName: '_svg_sprite.scss',
 		cssFormat: 'scss',
 		padding: 0
 	}));
 	
 	spriteData.img.pipe(gulp.dest('./src/img'));
 	spriteData.css.pipe(gulp.dest('./src/sass'));
-});
+});*/
 
 
 
@@ -324,7 +308,7 @@ gulp.task('watch', function() {
 
 // ~Build tasks~
 //Build dev version
-gulp.task('build', ['styles:vendor', 'styles', 'js:vendor', 'js', 'images', 'fonts', 'html']);
+gulp.task('build', ['styles:vendor', 'styles', 'js:vendor', 'js',  'images', 'fonts', 'html']);
 
 // Build and run dev environment
 gulp.task('default', ['build', 'webServer', 'openBrowser', 'watch']);

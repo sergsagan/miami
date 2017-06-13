@@ -1,27 +1,20 @@
 .btn{
-  padding: 7px 10px;
-  border-radius: 5px;
-  text-transform: uppercase;
   font-size: 14px;
-  line-height: 14px;
-  font-weight: 400;
-  box-sizing: border-box;
+  width: 100%;
+  height: 52px;
+  line-height: 52px;
+  background-color: rgb(0, 170, 239);
+  color: rgb(255, 255, 255);
+  font-family: $Ubuntu;
+  font-weight: 500;
+  display: block;
+  text-transform: uppercase;
+  text-decoration: none;
 
-  &__light{
-    background-color: $base-color;
-    color:  rgba(175, 70, 26, 1);
-    &:hover{
-      background-color: lighten($base-color, 15%);
-      color: rgba(175, 70, 26, .75);
-    }
-  }
-
-  &__dark{
-    background-color: $stack-color;
-    color: rgba(234, 234, 234, .75);
-    &:hover{
-      background-color: lighten($stack-color, 15%);
-      color: rgba(234, 234, 234, 1);
-    }
+  &_view{
+    display: inline-block;
+    padding: 0 60px;
+    width: auto;
   }
 }
+

@@ -1,0 +1,395 @@
+.wrapper{
+
+  .hero{
+    background: url("../img/hero-bg.jpg") 50% 0 no-repeat;
+    -webkit-background-size:cover;
+    background-size: cover;
+    width: 100%;
+    max-width: 1260px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0;
+
+    .container{
+      height: 100vh;
+      min-height: 500px;
+      position: relative;
+    }
+
+    .header{
+      padding-top: 100px;
+      position: absolute;
+      left: 0;
+      right: 0;
+
+      &__logo{
+        position: absolute;
+        top: -25px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        text-decoration: none;
+
+        .icon-logo{
+          display: block;
+          font-size: 200px;
+
+          .path1:before, .path2:before, .path3:before, .path4:before, .path5:before, .path6:before, .path7:before, .path8:before,
+          .path9:before, .path10:before, .path11:before, .path12:before, .path13:before, .path14:before, .path15:before, .path16:before,
+          .path17:before, .path18:before, .path19:before{
+            color: rgb(255, 255, 255);
+          }
+        }
+      }
+
+      &__phone{
+        float: left;
+        opacity: 0.6;
+        color: rgb(255, 255, 255);
+        font-family: $Ubuntu;
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 500;
+        text-transform: uppercase;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      &__call{
+        float: right;
+        opacity: 0.6;
+        color: rgb(255, 255, 255);
+        font-family: $Ubuntu;
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 500;
+        text-transform: uppercase;
+        cursor: pointer;
+        text-decoration: none;
+        border-bottom: 1px dashed rgba(255, 255, 255, .6);
+      }
+    }
+
+    .nav{
+      position: absolute;
+      z-index: 50;
+      bottom: 30px;
+      left: 0;
+      right: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      li{
+
+        a{
+          color: rgb(255, 255, 255);
+          font-family: $Ubuntu;
+          font-size: 16px;
+          font-weight: 500;
+          text-transform: uppercase;
+          text-decoration: none;
+          cursor: pointer;
+          @include transition(all .5s);
+
+          &:hover{
+            color: rgba(255, 255, 255, 0.5);
+          }
+        }
+      }
+    }
+
+    .gradient{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 1260px;
+      height: 95px;
+      z-index: 10;
+      background-color: rgba(0, 0, 0, 0.25);
+      background-image: linear-gradient(to top, rgb(4, 7, 38) 0%, rgb(4, 7, 38) 42%, rgba(4, 7, 38, 0) 100%);
+    }
+
+  }
+
+  section.best{
+
+    .best{
+      &__motto{
+        float: left;
+        width: 38%;
+        font-family: $Ubuntu;
+        font-size: 48px;
+        line-height: 60px;
+        text-transform: uppercase;
+        color: rgb(0, 0, 0);
+        font-weight: 300;
+
+        span{
+          color: rgb(0, 170, 239);
+          font-weight: 300;
+        }
+      }
+      &__text {
+        float: right;
+        width: 55%;
+
+        p {
+          color: rgb(0, 0, 0);
+          font-family: $Ubuntu;
+          font-size: 16px;
+          line-height: 24px;
+          font-weight: 400;
+        }
+        ol{
+          margin-bottom: 40px;
+          li{
+            color: rgb(0, 0, 0);
+            font-family: $Ubuntu;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+          }
+        }
+      }
+    }
+  }
+
+  .consultation, .contacts{
+    .left{
+      float: left;
+      width: 49%;
+
+      h3{
+        color: rgb(0, 0, 0);
+        font-family: $Ubuntu;
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 36px;
+        margin-bottom: 30px;
+      }
+      p{
+        color: rgb(0, 0, 0);
+        font-family: $Ubuntu;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+      }
+
+    }
+    .right{
+      float: right;
+      width: 42%;
+    }
+  }
+
+  .contacts{
+    ul{
+      li{
+        display: block;
+        color: rgb(0, 0, 0);
+        font-family: $Ubuntu;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 30px;
+        margin-bottom: 20px;
+
+        a{
+          color: rgb(0, 0, 0);
+          font-family: $Ubuntu;
+          font-size: 24px;
+          font-weight: 400;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .gallery{
+    .apartments{
+
+      .apartaments__photos{
+        margin-bottom: 20px;
+        display: flex;
+
+        .photo{
+          margin-right: 0;
+
+          &:first-child{
+            margin-right: 20px;
+          }
+        }
+      }
+
+      a{
+        display: block;
+        font-family: $Ubuntu;
+        font-size: 16px;
+        line-height: 22px;
+        color: rgb(0, 0, 0);
+        font-weight: 500;
+        text-decoration: none;
+        margin-bottom: 35px;
+
+        span{
+          color: rgb(0, 170, 239);
+          font-weight: 400;
+        }
+      }
+    }
+
+    .bottom__wrap{
+      text-align: center;
+    }
+  }
+
+  .testimonials{
+
+    .testimonials-wrap{
+      display: flex;
+      justify-content: space-between;
+
+      .testi{
+        text-align: center;
+        width: 30%;
+
+        &__photo{
+          margin: 0 auto 15px;
+          width: 150px;
+          height: 150px;
+          position: relative;
+
+          &:before{
+            content: '';
+            position: absolute;
+            left: -30px;
+            top: 50%;
+            margin-top: -15px;
+            width: 36px;
+            height: 29px;
+            background: url("../img/quotes.png");
+          }
+        }
+        &__name{
+          font-family: $Ubuntu;
+          font-size: 16px;
+          line-height: 22px;
+          color: rgb(0, 0, 0);
+          font-weight: 700;
+        }
+        &__position{
+          color: rgb(105, 105, 115);
+          font-style: italic;
+          margin-bottom: 30px;
+        }
+        &__description{
+          text-align: center;
+          p{
+            color: rgb(0, 0, 0);
+            font-family: $Ubuntu;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 22px;
+          }
+        }
+      }
+    }
+  }
+
+  section{
+    width: 100%;
+    max-width: 1260px;
+    margin: 0 auto;
+    height: auto;
+    padding: 130px 0;
+    position: relative;
+
+    &:nth-child(odd){
+      background-color: rgb(238, 238, 238);
+    }
+
+    .section__title{
+      position: absolute;
+      left: 50%;
+      top: -.5em;
+      color: rgb(0, 0, 0);
+      font-family: $Ubuntu;
+      font-size: 48px;
+      font-weight: 300;
+      text-transform: uppercase;
+      padding-bottom: 16px;
+      line-height: 1;
+
+      .icon-crown:before{
+        position: absolute;
+        bottom: -5px;
+        font-size: 13px;
+        color: rgb(0, 170, 239);
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      &:after, &:before{
+        content: '';
+        width: calc(50% - 20px);
+        position: absolute;
+        height: 2px;
+        background-color: rgb(0, 170, 239);
+        bottom: 0;
+      }
+      &:before{
+        left: 0;
+      }
+      &:after{
+        right: 0;
+      }
+    }
+  }
+}
+
+footer{
+  width: 100%;
+  max-width: 1260px;
+  height: 540px;
+  margin: auto;
+  background: url("../img/footer.jpg") 50% 50% no-repeat;
+  -webkit-background-size:cover;
+  background-size: cover;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+
+  .footer{
+    &__logo{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      .icon-logo{
+        display: block;
+        font-size: 200px;
+
+        .path1:before, .path2:before, .path3:before, .path4:before, .path5:before, .path6:before, .path7:before, .path8:before,
+        .path9:before, .path10:before, .path11:before, .path12:before, .path13:before, .path14:before, .path15:before, .path16:before,
+        .path17:before, .path18:before, .path19:before{
+          color: rgb(255, 255, 255);
+        }
+      }
+    }
+    &__copy{
+      position: absolute;
+      color: rgb(255, 255, 255);
+      font-family: $Ubuntu;
+      font-size: 16px;
+      font-weight: 500;
+      text-transform: uppercase;
+      text-align: center;
+      bottom: 66px;
+      left: 0;
+      right: 0;
+    }
+  }
+
+
+}
